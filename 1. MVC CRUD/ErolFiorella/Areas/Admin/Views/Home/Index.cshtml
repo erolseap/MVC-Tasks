@@ -1,0 +1,50 @@
+﻿@using ErolFiorella.Models
+@model List<FlowerEntry>
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            DataTable Example
+        </div>
+        <div class="card-body">
+            <a asp-area="Admin" asp-controller="Home" asp-action="CreateFlowerEntry">Add flower to database</a>
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var entry in Model)
+                    {
+                        <tr>
+                            <td>@entry.Id</td>
+                            <td>@entry.Name</td>
+                            <td>@entry.Price</td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="EditFlowerEntry" asp-route-id="@entry.Id">Edit</a>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="DeleteFlowerEntry" asp-route-id="@entry.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
