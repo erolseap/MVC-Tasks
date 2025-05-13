@@ -1,0 +1,11 @@
+﻿@using ErolFashion.Areas.Admin.ViewModels
+@model HomeCreateFeaturedProductVM
+
+<form asp-area="Admin" asp-controller="Home" asp-action="CreateFeaturedProduct" method="post" enctype="multipart/form-data">
+    <input asp-for="Name" placeholder="Name" required />
+    <input asp-for="Price" placeholder="Price" required />
+    <input asp-for="Description" placeholder="Description" />
+    <input asp-for="SmallNote" placeholder="Small note (not important)" />
+    <input asp-for="Image" placeholder="Background image" required />
+    <button type="submit">Submit</button>
+</form>

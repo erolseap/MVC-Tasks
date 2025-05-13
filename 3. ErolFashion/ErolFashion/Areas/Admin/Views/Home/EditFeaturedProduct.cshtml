@@ -1,0 +1,11 @@
+﻿@using ErolFashion.Models
+@model FeaturedProduct
+
+<form asp-area="Admin" asp-controller="Home" asp-action="EditFeaturedProduct" method="post" enctype="multipart/form-data">
+    <input asp-for="Name" placeholder="Name" />
+    <input asp-for="Price" placeholder="Price" />
+    <input asp-for="Description" placeholder="Description" />
+    <input asp-for="SmallNote" placeholder="Small note (not important)" />
+    <input type="file" name="Image" placeholder="Background image" />
+    <button type="submit">Submit</button>
+</form>
