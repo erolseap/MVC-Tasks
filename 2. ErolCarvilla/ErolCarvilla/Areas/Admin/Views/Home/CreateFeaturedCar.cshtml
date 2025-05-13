@@ -1,7 +1,7 @@
-﻿@using ErolCarvilla.Models
-@model FeaturedCar
+﻿@using ErolCarvilla.Areas.Admin.ViewModels
+@model HomeCreateFeaturedCarVM
 
-<form asp-area="Admin" asp-controller="Home" asp-action="CreateFeaturedCar" method="post">
+<form asp-area="Admin" asp-controller="Home" asp-action="CreateFeaturedCar" method="post" enctype="multipart/form-data">
     <input asp-for="Name" />
     <input asp-for="Model" />
     <input asp-for="Price" />
@@ -9,5 +9,6 @@
     <input asp-for="Mi" />
     <input asp-for="IsManual" />
     <input asp-for="Description" />
+    <input asp-for="Image" />
     <button type="submit">Submit</button>
 </form>
