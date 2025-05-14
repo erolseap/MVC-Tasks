@@ -1,0 +1,36 @@
+﻿@using ErolCharityNTIER.DAL.Models
+@{
+    var causesList = ViewData["Causes"] as List<Cause>;
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Create a cause</h1>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <form asp-area="Admin" asp-controller="Home" asp-action="CreateCause" method="post" enctype="multipart/form-data">
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputName" name="Name" placeholder="Lorem ipsum" required />
+                    <label for="inputEmail">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputDescription" name="Description" placeholder="Lorem ipsum" />
+                    <label for="inputDescription">Description</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputRaised" type="number" step="0.01" name="Raised" placeholder="100.00" />
+                    <label for="inputRaised">Raised</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputGoal" type="number" step="0.01" name="Goal" placeholder="10000.00" />
+                    <label for="inputGoal">Goal</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputImage" type="file" name="Image" required />
+                    <label for="inputImage">Background image</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
