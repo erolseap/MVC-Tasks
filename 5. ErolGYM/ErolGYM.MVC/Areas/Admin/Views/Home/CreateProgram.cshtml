@@ -1,0 +1,29 @@
+﻿@model HomeCreateProgramVM
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Create a new gym program</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row">
+        <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div class="card-body">
+                <form asp-area="Admin" asp-controller="Home" asp-action="CreateProgram" method="post" enctype="multipart/form-data">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="inputName" asp-for="Name" required placeholder="Lorem ipsum dolor" />
+                        <label for="inputName">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="inputDescription" asp-for="Description" required placeholder="Lorem ipsum dolor sit amet..." />
+                        <label for="inputDescription">Description</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="inputImage" asp-for="Image" required />
+                        <label for="inputImage">Icon</label>
+                    </div>
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
