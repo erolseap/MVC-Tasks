@@ -1,0 +1,41 @@
+﻿@model CollectionModel
+
+<div class="container-fluid px-4">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Edit a collection #@Model.Id (@Model.Name)
+        </div>
+        <div class="card-body">
+            <form asp-area="Admin" asp-controller="Home" asp-action="EditCollection" method="post" enctype="multipart/form-data">
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputName" asp-for="Name" placeholder="Lorem ipsum" />
+                    <label for="inputName">Name</label>
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputCategory" asp-for="Category" placeholder="Lorem ipsum dolor sit amet" />
+                    <label for="inputCategory">Category name</label>
+                    <span asp-validation-for="Category"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputItemsIn" asp-for="ItemsIn" placeholder="0, 10, 20, 30" />
+                    <label for="inputItemsIn">Count of items in</label>
+                    <span asp-validation-for="ItemsIn"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputItemsTotal" asp-for="ItemsTotal" placeholder="100, 200, 300" />
+                    <label for="inputItemsTotal">Count of items total</label>
+                    <span asp-validation-for="ItemsTotal"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputImage" type="file" name="Image" />
+                    <label for="inputImage">Collection image</label>
+                </div>
+                <button type="submit">Save</button>
+                <div asp-validation-summary="All">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

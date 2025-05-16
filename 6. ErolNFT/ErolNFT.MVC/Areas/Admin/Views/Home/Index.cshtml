@@ -1,0 +1,54 @@
+﻿@{
+    var collectionsList = ViewData["Collections"] as List<CollectionModel>;
+}
+
+<div class="container-fluid px-4">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Collections list | <a asp-area="Admin" asp-controller="Home" asp-action="CreateCollection">Create</a>
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Items in</th>
+                        <th>Items total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Items in</th>
+                        <th>Items total</th>
+                        <th>Actions</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var entry in collectionsList)
+                    {
+                        <tr>
+                            <td>@entry.Id</td>
+                            <td>@entry.Name</td>
+                            <td>@entry.Category</td>
+                            <td>@entry.ItemsIn</td>
+                            <td>@entry.ItemsTotal</td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="EditCollection" asp-route-id="@entry.Id">Edit</a>
+                                <form asp-area="Admin" asp-controller="Home" asp-action="DeleteCollection" asp-route-id="@entry.Id" method="post">
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
