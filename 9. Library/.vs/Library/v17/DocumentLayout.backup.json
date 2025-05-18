@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CFF\\Library\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C9BE50B-E269-4FFA-95CB-428A4921FAE9}|Library.csproj|d:\\cff\\library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C9BE50B-E269-4FFA-95CB-428A4921FAE9}|Library.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C9BE50B-E269-4FFA-95CB-428A4921FAE9}|LibraryApp.csproj|d:\\cff\\library\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C9BE50B-E269-4FFA-95CB-428A4921FAE9}|LibraryApp.csproj|solutionrelative:library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C9BE50B-E269-4FFA-95CB-428A4921FAE9}|Library.csproj|d:\\cff\\library\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C9BE50B-E269-4FFA-95CB-428A4921FAE9}|Library.csproj|solutionrelative:book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Library.cs",
+              "DocumentMoniker": "D:\\CFF\\Library\\Library.cs",
+              "RelativeDocumentMoniker": "Library.cs",
+              "ToolTip": "D:\\CFF\\Library\\Library.cs",
+              "RelativeToolTip": "Library.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowCEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T19:53:57.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\CFF\\Library\\Book.cs",
+              "RelativeDocumentMoniker": "Book.cs",
+              "ToolTip": "D:\\CFF\\Library\\Book.cs",
+              "RelativeToolTip": "Book.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwAsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T19:53:14.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CFF\\Library\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\CFF\\Library\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwDYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T19:48:20.352Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
