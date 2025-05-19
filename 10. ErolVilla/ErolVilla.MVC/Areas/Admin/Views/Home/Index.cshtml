@@ -1,0 +1,66 @@
+﻿@{
+    var housesList = ViewData["Houses"] as List<HouseModel>;
+}
+
+<div class="container-fluid px-4">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Houses list | <a asp-area="Admin" asp-controller="Home" asp-action="CreateHouse">Create</a>
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Note</th>
+                        <th>Price</th>
+                        <th>Bedrooms count</th>
+                        <th>Bathrooms count</th>
+                        <th>Area</th>
+                        <th>Floor</th>
+                        <th>Parking spots count</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Note</th>
+                        <th>Price</th>
+                        <th>Bedrooms count</th>
+                        <th>Bathrooms count</th>
+                        <th>Area</th>
+                        <th>Floor</th>
+                        <th>Parking spots count</th>
+                        <th>Actions</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var entry in housesList)
+                    {
+                        <tr>
+                            <td>@entry.Id</td>
+                            <td>@entry.Name</td>
+                            <td>@entry.Note</td>
+                            <td>@(entry.Price)$</td>
+                            <td>@entry.BedroomsCount</td>
+                            <td>@entry.BathroomsCount</td>
+                            <td>@entry.Area</td>
+                            <td>@entry.Floor</td>
+                            <td>@entry.ParkingSpotsCount</td>
+                            <td>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="EditHouse" asp-route-id="@entry.Id">Edit</a>
+                                <form asp-area="Admin" asp-controller="Home" asp-action="DeleteHouse" asp-route-id="@entry.Id" method="post">
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

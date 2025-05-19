@@ -1,0 +1,62 @@
+﻿@model HouseModel
+
+<div class="container-fluid px-4">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Edit a house #@Model.Id (@Model.Name)
+        </div>
+        <div class="card-body">
+            <form asp-area="Admin" asp-controller="Home" asp-action="EditHouse" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="Id" />
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputName" asp-for="Name" placeholder="Lorem ipsum" />
+                    <label for="inputName">Name</label>
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputCategory" asp-for="Note" placeholder="Lorem ipsum dolor sit amet" />
+                    <label for="inputCategory">Note body</label>
+                    <span asp-validation-for="Note"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputPrice" asp-for="Price" placeholder="999999.52" />
+                    <label for="inputPrice">Qiymet</label>
+                    <span asp-validation-for="Price"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputBedroomsCount" asp-for="BedroomsCount" placeholder="0, 2, 5, 7..." />
+                    <label for="inputBedroomsCount">Count of bedrooms</label>
+                    <span asp-validation-for="BedroomsCount"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputBathroomsCount" asp-for="BathroomsCount" placeholder="0, 1, 3, 5, 7..." />
+                    <label for="inputBathroomsCount">Count of bathrooms</label>
+                    <span asp-validation-for="BathroomsCount"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputArea" asp-for="Area" placeholder="0, 1, 3, 5, 7..." />
+                    <label for="inputArea">Area size</label>
+                    <span asp-validation-for="Area"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputFloor" asp-for="Floor" placeholder="0, 1, 3, 5, 7..." />
+                    <label for="inputFloor">Floor</label>
+                    <span asp-validation-for="Floor"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputParkingSpotsCount" asp-for="ParkingSpotsCount" placeholder="0, 1, 3, 5, 7..." />
+                    <label for="inputParkingSpotsCount">Parking spots count</label>
+                    <span asp-validation-for="ParkingSpotsCount"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputImage" type="file" name="Image" />
+                    <label for="inputImage">House image</label>
+                </div>
+                <button type="submit">Save</button>
+                <div asp-validation-summary="All">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
